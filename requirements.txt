@@ -1,0 +1,24 @@
+# Core dependencies
+pandas
+numpy
+yfinance
+requests
+
+# Technical indicators
+pandas-ta
+
+# Scheduling
+APScheduler
+
+# Email
+python-dotenv
+
+# Configuration
+PyYAML
+
+# Optional: For better data sources (uncomment when ready)
+polygon-api-client
+ib-insync
+
+# Development
+pytest

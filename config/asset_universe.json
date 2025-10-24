@@ -1,0 +1,110 @@
+{
+  "stocks": [
+    "AAPL", "MSFT", "GOOGL", "AMZN", "NVDA",
+    "META", "TSLA", "BRK-B", "UNH", "JNJ",
+    "V", "WMT", "JPM", "PG", "MA",
+    "XOM", "HD", "CVX", "MRK", "ABBV",
+    "COST", "PEP", "KO", "AVGO", "TMO",
+    "LLY", "ADBE", "NFLX", "CRM", "AMD",
+    "CSCO", "ACN", "NKE", "TXN", "ORCL",
+    "QCOM", "INTC", "CMCSA", "HON", "UNP",
+    "INTU", "LOW", "BA", "CAT", "IBM",
+    "AMGN", "SBUX", "GS", "DE", "AXP",
+    "BLK", "SPGI", "MS", "BKNG", "ELV",
+    "MDT", "SYK", "GILD", "MMC", "SCHW",
+    "CI", "VRTX", "ADP", "REGN", "ISRG",
+    "CB", "SO", "ZTS", "LRCX", "ADI",
+    "MO", "PLD", "DUK", "MDLZ", "TGT",
+    "BMY", "USB", "PNC", "BDX", "SLB",
+    "EOG", "EQIX", "ITW", "CL", "APD",
+    "CSX", "NOC", "MMM", "HUM", "CME",
+    "PYPL", "AMAT", "TJX", "ETN", "BSX",
+    "CMG", "FI", "SHW", "NSC", "MCO",
+    "WM", "MU", "GE", "COF", "AON",
+    
+    "T", "VZ", "DIS", "NFLX", "CMCSA",
+    "NEE", "RTX", "LMT", "DHR", "PM",
+    "ABT", "COP", "WFC", "BAC", "C",
+    "GS", "AIG", "MET", "PRU", "ALL",
+    "TRV", "PGR", "AFL", "HIG", "AMP",
+    
+    "ORCL", "CRM", "NOW", "SNOW", "PLTR",
+    "PANW", "CRWD", "ZS", "DDOG", "NET",
+    "MDB", "TEAM", "WDAY", "OKTA", "FTNT",
+    
+    "F", "GM", "RIVN", "LCID", "NIO",
+    "XPEV", "LI", "TSLA", "MBLY", "LAZR",
+    
+    "CVS", "WBA", "CI", "HUM", "CNC",
+    "ANTM", "ELV", "MOH", "HCA", "THC",
+    
+    "MCD", "SBUX", "YUM", "QSR", "CMG",
+    "DPZ", "WEN", "JACK", "SHAK", "DNUT",
+    
+    "HD", "LOW", "WSM", "BBY", "BBBY",
+    
+    "NKE", "LULU", "UAA", "CROX", "DECK",
+    "VFC", "PVH", "RL", "CPRI", "TPR",
+    
+    "JPM", "BAC", "WFC", "C", "USB",
+    "PNC", "TFC", "COF", "SCHW", "BK",
+    "STT", "NTRS", "CFG", "KEY", "RF",
+    
+    "XOM", "CVX", "COP", "SLB", "EOG",
+    "MPC", "PSX", "VLO", "HES", "OXY",
+    "DVN", "FANG", "MRO", "APA", "HAL",
+    
+    "NEE", "DUK", "SO", "D", "EXC",
+    "SRE", "AEP", "XEL", "ED", "ES",
+    "PEG", "WEC", "EIX", "DTE", "PPL",
+    
+    "AMT", "CCI", "SBAC", "EQIX", "DLR",
+    "PLD", "PSA", "AVB", "EQR", "SPG",
+    "WELL", "VTR", "O", "VICI", "IRM",
+    
+    "UNP", "CSX", "NSC", "KSU", "GWR",
+    "UPS", "FDX", "CHRW", "EXPD", "JBHT",
+    
+    "LUV", "DAL", "UAL", "AAL", "JBLU",
+    "SAVE", "ALK", "HA", "SKYW", "MESA",
+    
+    "MAR", "HLT", "H", "IHG", "WH",
+    "RHP", "PK", "STAY", "APLE", "SHO",
+    
+    "GOOGL", "GOOG", "META", "SNAP", "PINS",
+    "TWTR", "MTCH", "BMBL", "YELP", "GRUB",
+    
+    "AMZN", "SHOP", "EBAY", "ETSY", "W",
+    "CHWY", "FTCH", "RH", "WSM", "PRTS",
+    
+    "V", "MA", "PYPL", "SQ", "AFRM",
+    "UPST", "LC", "SOFI", "NU", "COIN",
+    
+    "UBER", "LYFT", "DASH", "ABNB", "EXPE",
+    "BKNG", "TCOM", "TRIP", "MMYT", "DESP",
+    
+    "NFLX", "DIS", "PARA", "WBD", "FOXA",
+    "CMCSA", "CHTR", "T", "VZ", "TMUS",
+    
+    "TSLA", "RIVN", "LCID", "F", "GM",
+    "TM", "HMC", "STLA", "RACE", "VWAGY"
+  ],
+  "indices": [
+    "^GSPC",
+    "^IXIC",
+    "^DJI",
+    "^GDAXI",
+    "^FTSE",
+    "^N225",
+    "^HSI",
+    "^FCHI",
+    "^STOXX50E",
+    "^AXJO"
+  ],
+  "commodities": [
+    "GC=F",
+    "SI=F",
+    "CL=F"
+  ],
+  "_comment": "Extended test set with 250+ stocks across all sectors for comprehensive testing of prediction and detection modes"
+}

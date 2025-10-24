@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+output/logs/
+
+# Output files
+output/*.csv
+output/*.png
+output/*.json
+
+# Keep output directory structure but ignore content
+!output/.gitkeep
+!output/logs/.gitkeep
+
+# Sensitive configuration (DO NOT COMMIT!)
+config/settings.yaml
+.env
+
+# Keep template
+!config/settings.yaml.template
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data cache
+*.cache
+*.pkl
+*.db
+*.db-journal
+
+# Debug scripts (optional - remove if you want to commit these)
+debug_*.py
+diagnose_*.py

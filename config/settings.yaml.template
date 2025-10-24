@@ -1,0 +1,99 @@
+# Double Top Scanner Configuration Template
+# Copy this file to settings.yaml and customize for your setup
+
+# Asset Configuration
+assets:
+  config_file: config/asset_universe.json
+  max_assets_to_scan: 200        # Maximum number of stocks to scan per run
+  sp500_auto_update: false       # Auto-fetch S&P 500 list (requires lxml)
+
+# Data Source Configuration  
+data:
+  source: yfinance               # Data source: 'yfinance' (free) or 'ibkr' (Interactive Brokers)
+  primary_timeframe: 4h          # Primary timeframe for pattern detection
+  
+  # Interactive Brokers settings (if using IBKR)
+  ibkr_host: 127.0.0.1
+  ibkr_port: 7497
+  ibkr_client_id: 1
+  
+  # Polygon.io settings (alternative data source - requires API key)
+  polygon_api_key: ''
+
+# Email Notification Configuration
+notification:
+  email_enabled: false           # Set to true to enable email alerts
+  method: email                  # 'email', 'console', or 'both'
+  
+  # Email settings
+  email_from: your-email@gmail.com
+  email_to: your-email@gmail.com
+  email_subject_prefix: "Double Top Scanner Alert"
+  
+  # SMTP settings for Gmail
+  smtp_host: smtp.gmail.com
+  smtp_port: 587
+  smtp_username: your-email@gmail.com
+  smtp_password: ''              # Use Gmail App Password (16 characters)
+  
+  # CSV attachment
+  attach_csv: true
+
+# Output Configuration
+output:
+  csv_enabled: true
+  csv_path: output/alerts_{date}.csv
+  log_level: INFO                # DEBUG, INFO, WARNING, ERROR
+  log_path: output/logs/scanner.log
+
+# Pattern Detection Parameters
+pattern:
+  mode: prediction               # 'prediction' (early warning) or 'detection' (confirmed only)
+  
+  # Core pattern parameters
+  price_tolerance_pct: 3.0       # Max price difference between peaks (%)
+  max_exceed_pct: 3.0            # Max % Peak2 can exceed Peak1 (prevents uptrend false positives)
+  trough_depth_pct: 3.0          # Minimum trough depth from peaks (%)
+  min_confidence: 30             # Minimum pattern quality score (0-100)
+  
+  # Peak detection
+  min_prominence: 2              # Minimum peak prominence for detection (%)
+  peak_window: 5                 # Window size for peak detection (bars)
+  
+  # Time constraints
+  min_candle_distance: 6         # Minimum bars between peaks
+  lookback_candles: 100          # Number of candles to analyze
+  
+  # Asymmetric prominence thresholds (double-top M-shape validation)
+  min_reversal_drop_pct: 1.5     # Min % drop after Peak 1 (reversal signal)
+  min_rally_rise_pct: 1.5        # Min % rise before Peak 2 (rally from trough)
+  
+  # Prediction mode specific parameters
+  max_peak_age_pct: 50           # Max % of lookback window for Peak 2 age
+  reversal_threshold_pct: 2      # Min % current price must be below Peak 2
+
+# RSI Configuration
+rsi:
+  period: 14                     # RSI calculation period
+  divergence_min_diff: 0.5       # Minimum RSI divergence in points
+  divergence_required: true      # Require RSI divergence for valid pattern
+  overbought_threshold: 70       # RSI level considered overbought
+  
+  # Timeframes for multi-timeframe analysis
+  timeframes:
+    - 4h
+    - 1d
+    - 1wk
+    - 1mo
+
+# Scoring System
+scoring:
+  min_score_to_report: 3         # Minimum score to include in alerts (0-6)
+  volume_decline_threshold: 20   # Min volume decline % for +1 score point
+
+# Schedule Configuration (for automated scans)
+schedule:
+  enabled: false                 # Enable scheduled scanning
+  run_time: '08:00'             # Time to run scan (24-hour format)
+  timezone: America/New_York     # Timezone for scheduled runs
+  days: mon-fri                  # Days to run (mon-sun, or 'daily')
